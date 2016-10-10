@@ -12,7 +12,6 @@ before_install:
   - npm i -g npm@^3
 script:
   - npm test
-  - npm run e2e
   - npm run build:prod
   - ./node_modules/.bin/firebase deploy --token ${FIREBASE_TOKEN}
 sudo: required
