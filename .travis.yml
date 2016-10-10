@@ -3,8 +3,6 @@ node_js:
   - "4"
   - "5"
   - "node"
-services:
-  - docker
 before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
@@ -13,7 +11,9 @@ before_install:
   # Updating NPM to relevant version >= 3 on Node.JS LTS
   - npm i -g npm@^3
 script:
-  - npm run ci
+  - npm run lint
+  - npm test
+  - npm run e2e
   - npm run build:prod
   - ./node_modules/.bin/firebase deploy --token ${FIREBASE_TOKEN}
 sudo: required
