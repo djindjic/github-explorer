@@ -10,13 +10,11 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-// Load the implementations that should be tested
 import { AppState } from '../app.service';
-import { Stars } from './Stars.component';
+import { Stars } from './stars.component';
 // import { Title } from './title';
 
 describe('Stars', () => {
-  // provide our implementations or mocks to the dependency injector
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
