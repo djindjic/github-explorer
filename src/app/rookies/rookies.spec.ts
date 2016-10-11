@@ -11,6 +11,7 @@ import {
 import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
+import { Github } from '../github-api';
 import { rookies } from './rookies.component';
 
 describe('rookies', () => {
@@ -26,6 +27,7 @@ describe('rookies', () => {
         deps: [MockBackend, BaseRequestOptions]
       },
       AppState,
+      Github,
       rookies
     ]
   }));
