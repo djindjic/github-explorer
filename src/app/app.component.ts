@@ -13,13 +13,13 @@ import { AppState } from './app.service';
       <div class="search-holder">
         <div class="input-group">
           <span class="input-group-addon">
-            Language
+            Location
           </span>
           <input
             type="text"
             class="form-control"
-            [value]="appState.get('language')"
-            (input)="appState.set('language', $event.target.value)"
+            [value]="appState.get('location')"
+            (input)="appState.set('location', $event.target.value)"
             aria-describedby="basic-addon1"
             autofocus>
         </div>
@@ -61,7 +61,7 @@ export class App {
   }
 
   ngOnInit() {
-    this.appState.set('language', 'javascript');
+    this.appState.set('location', 'Serbia');
   }
 
 }
