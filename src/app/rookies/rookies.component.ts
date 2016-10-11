@@ -14,7 +14,11 @@ export class Rookies {
     public appState: AppState,
     public github: Github
   ) {
-      github.getData().subscribe((data) => {
+      github.getData({
+        location: appState.get('location'),
+        sort: 'joined',
+        order: 'desc'
+      }).subscribe((data) => {
         this.list = data.items;
       });
   }

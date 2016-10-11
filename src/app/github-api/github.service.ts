@@ -3,11 +3,13 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class Github {
+  endpointUrl: string = 'https://api.github.com/search/users';
   constructor(public http: Http) {}
 
-  getData() {
-    return this.http.get('https://api.github.com/search/users?q=location:serbia+sort:joined')
-                    .map(res => res.json());
+  getData(option: {location: string, sort: string, order: string}) {
+    return this.http.get(`
+      ${this.endpointUrl}?q=location:${option.location}&sort=${option.sort}&order=${option.order}
+    `).map(res => res.json());
   }
 
 }
