@@ -13,7 +13,7 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { App } from './app.component';
 import { AppState, InternalStateType } from './app.service';
-import { Stars } from './stars';
+import { rookies } from './rookies';
 import { Followers } from './followers';
 import { Repos } from './repos';
 import { NoContent } from './no-content';
@@ -39,7 +39,7 @@ type StoreType = {
   declarations: [
     App,
     Repos,
-    Stars,
+    rookies,
     Followers,
     NoContent
   ],

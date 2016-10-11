@@ -30,7 +30,7 @@ import { AppState } from './app.service';
             [routerLinkActiveOptions]="{exact: true}"
             routerLinkActive="active">
           <a>
-            BY STARS
+            Rookies
           </a>
         </li>
         <li role="presentation"

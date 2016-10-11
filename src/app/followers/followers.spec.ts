@@ -12,7 +12,6 @@ import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
 import { Followers } from './followers.component';
-// import { Title } from './title';
 
 describe('Followers', () => {
   beforeEach(() => TestBed.configureTestingModule({

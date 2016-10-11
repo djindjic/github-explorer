@@ -11,10 +11,9 @@ import {
 import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
-import { Stars } from './stars.component';
-// import { Title } from './title';
+import { rookies } from './rookies.component';
 
-describe('Stars', () => {
+describe('rookies', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
@@ -27,15 +26,15 @@ describe('Stars', () => {
         deps: [MockBackend, BaseRequestOptions]
       },
       AppState,
-      Stars
+      rookies
     ]
   }));
 
-  it('should log ngOnInit', inject([ Stars ], (stars: Stars) => {
+  it('should log ngOnInit', inject([ rookies ], (rookies: rookies) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    stars.ngOnInit();
+    rookies.ngOnInit();
     expect(console.log).toHaveBeenCalled();
   }));
 

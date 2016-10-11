@@ -4,24 +4,24 @@ import { AppState } from '../app.service';
 import { Github } from '../github-api';
 
 @Component({
-  selector: 'stars',
-  styleUrls: [ './stars.component.scss' ],
-  templateUrl: './stars.component.html'
+  selector: 'rookies',
+  styleUrls: [ './rookies.component.scss' ],
+  templateUrl: './rookies.component.html'
 })
-export class Stars {
+export class rookies {
   list: any[];
   constructor(
     public appState: AppState,
     public github: Github
   ) {
       github.getData().subscribe((data) => {
-        console.log('stars', data);
+        console.log('rookies', data);
         this.list = data.items;
       });
   }
 
   ngOnInit() {
-    console.log('hello `Stars` component');
+    console.log('hello `rookies` component');
     // this.title.getData().subscribe(data => this.data = data);
   }
 }

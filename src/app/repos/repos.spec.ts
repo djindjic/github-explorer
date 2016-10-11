@@ -12,7 +12,6 @@ import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
 import { Repos } from './repos.component';
-// import { Title } from './title';
 
 describe('Repos', () => {
   beforeEach(() => TestBed.configureTestingModule({
