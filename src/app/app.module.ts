@@ -17,10 +17,12 @@ import { Stars } from './stars';
 import { Followers } from './followers';
 import { Repos } from './repos';
 import { NoContent } from './no-content';
+import { Github } from './github-api';
 
 // Application wide providers
 const APP_PROVIDERS = [
-  AppState
+  AppState,
+  Github
 ];
 
 type StoreType = {

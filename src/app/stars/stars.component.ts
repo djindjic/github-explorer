@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
 
 import { AppState } from '../app.service';
-// import { Title } from './title';
+import { Github } from '../github-api';
 
 @Component({
   selector: 'stars',
-  // providers: [
-  //   Title
-  // ],
   styleUrls: [ './stars.component.scss' ],
   templateUrl: './stars.component.html'
 })
 export class Stars {
-  constructor(public appState: AppState) {
-    console.log('stars', appState);
+  list: any[];
+  constructor(
+    public appState: AppState,
+    public github: Github
+  ) {
+      github.getData().subscribe((data) => {
+        console.log('stars', data);
+        this.list = data.items;
+      });
   }
 
   ngOnInit() {

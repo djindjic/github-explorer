@@ -1,3 +1,11 @@
-<h1 class="by-stars">
-  order by stars
-</h1>
+<div class="message">
+  say hello to rookies!
+</div>
+<table class="users rookies">
+  <body>
+    <tr *ngFor="let item of list">
+      <td><img class="avatar" src="{{item.avatar_url}}" /></td>
+      <td>{{item.login}}</td>
+    </tr>
+  </body>
+</table>
