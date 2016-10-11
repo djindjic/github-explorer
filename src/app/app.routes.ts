@@ -1,11 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
-import { Home } from './home';
+import { Stars } from './stars';
+// import { Stars } from './stars';
+// import { Stars } from './stars';
 import { About } from './about';
 import { NoContent } from './no-content';
 
 export const ROUTES: Routes = [
-  { path: '',      component: Home },
-  { path: 'home',  component: Home },
+  { path: '',      component: Stars },
+  { path: 'stars', component: Stars },
   { path: 'about', component: About },
   { path: '**',    component: NoContent },
 ];

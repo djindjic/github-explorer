@@ -12,15 +12,13 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
 import { App } from './app.component';
-import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { Home } from './home';
+import { Stars } from './stars';
 import { About } from './about';
 import { NoContent } from './no-content';
 
 // Application wide providers
 const APP_PROVIDERS = [
-  ...APP_RESOLVER_PROVIDERS,
   AppState
 ];
 
@@ -38,7 +36,7 @@ type StoreType = {
   declarations: [
     App,
     About,
-    Home,
+    Stars,
     NoContent
   ],
   imports: [ // import Angular's modules
