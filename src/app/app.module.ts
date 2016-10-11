@@ -15,7 +15,7 @@ import { App } from './app.component';
 import { AppState, InternalStateType } from './app.service';
 import { Rookies } from './rookies';
 import { Followers } from './followers';
-import { Repos } from './repos';
+import { Seniors } from './seniors';
 import { NoContent } from './no-content';
 import { Github } from './github-api';
 
@@ -38,7 +38,7 @@ type StoreType = {
   bootstrap: [ App ],
   declarations: [
     App,
-    Repos,
+    Seniors,
     Rookies,
     Followers,
     NoContent

@@ -4,11 +4,11 @@ import { AppState } from '../app.service';
 import { Github } from '../github-api';
 
 @Component({
-  selector: 'rookies',
-  styleUrls: [ './rookies.component.scss' ],
-  templateUrl: './rookies.component.html'
+  selector: 'seniors',
+  styleUrls: [ './seniors.component.scss' ],
+  templateUrl: './seniors.component.html'
 })
-export class Rookies {
+export class Seniors {
   list: any[];
   constructor(
     public appState: AppState,
@@ -20,6 +20,6 @@ export class Rookies {
   }
 
   ngOnInit() {
-    console.log('hello `rookies` component');
+    console.log('hello `seniors` component');
   }
 }

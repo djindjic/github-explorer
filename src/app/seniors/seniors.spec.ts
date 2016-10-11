@@ -11,9 +11,10 @@ import {
 import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
-import { Repos } from './repos.component';
+import { Github } from '../github-api';
+import { Seniors } from './seniors.component';
 
-describe('Repos', () => {
+describe('seniors', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
@@ -26,15 +27,16 @@ describe('Repos', () => {
         deps: [MockBackend, BaseRequestOptions]
       },
       AppState,
-      Repos
+      Github,
+      Seniors
     ]
   }));
 
-  it('should log ngOnInit', inject([ Repos ], (repos: Repos) => {
+  it('should log ngOnInit', inject([ Seniors ], (seniors: Seniors) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    repos.ngOnInit();
+    seniors.ngOnInit();
     expect(console.log).toHaveBeenCalled();
   }));
 

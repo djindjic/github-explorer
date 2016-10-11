@@ -34,11 +34,11 @@ import { AppState } from './app.service';
           </a>
         </li>
         <li role="presentation"
-            [routerLink]=" ['./repos'] "
+            [routerLink]=" ['./seniors'] "
             [routerLinkActiveOptions]="{exact: true}"
             routerLinkActive="active">
           <a>
-            BY REPOS
+            BY seniors
           </a>
         </li>
         <li role="presentation"
