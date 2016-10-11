@@ -10,17 +10,19 @@ import { AppState } from './app.service';
   ],
   template: `
     <main>
-      <div class="input-group">
-        <span class="input-group-addon">
-          Language
-        </span>
-        <input
-          type="text"
-          class="form-control"
-          [value]="appState.get('language')"
-          (input)="appState.set('language', $event.target.value)"
-          aria-describedby="basic-addon1"
-          autofocus>
+      <div class="search-holder">
+        <div class="input-group">
+          <span class="input-group-addon">
+            Language
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            [value]="appState.get('language')"
+            (input)="appState.set('language', $event.target.value)"
+            aria-describedby="basic-addon1"
+            autofocus>
+        </div>
       </div>
       <ul class="nav nav-tabs">
         <li role="presentation"
