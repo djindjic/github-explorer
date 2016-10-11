@@ -8,7 +8,7 @@ import { Github } from '../github-api';
   styleUrls: [ './rookies.component.scss' ],
   templateUrl: './rookies.component.html'
 })
-export class rookies {
+export class Rookies {
   list: any[];
   constructor(
     public appState: AppState,

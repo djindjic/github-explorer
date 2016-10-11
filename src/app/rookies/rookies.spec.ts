@@ -12,7 +12,7 @@ import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
 import { Github } from '../github-api';
-import { rookies } from './rookies.component';
+import { Rookies } from './rookies.component';
 
 describe('rookies', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -28,11 +28,11 @@ describe('rookies', () => {
       },
       AppState,
       Github,
-      rookies
+      Rookies
     ]
   }));
 
-  it('should log ngOnInit', inject([ rookies ], (rookies: rookies) => {
+  it('should log ngOnInit', inject([ Rookies ], (rookies: Rookies) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
