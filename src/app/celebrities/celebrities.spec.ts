@@ -11,9 +11,10 @@ import {
 import { MockBackend } from '@angular/http/testing';
 
 import { AppState } from '../app.service';
-import { Followers } from './followers.component';
+import { Github } from '../github-api';
+import { Celebrities } from './celebrities.component';
 
-describe('Followers', () => {
+describe('celebrities', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
@@ -26,15 +27,16 @@ describe('Followers', () => {
         deps: [MockBackend, BaseRequestOptions]
       },
       AppState,
-      Followers
+      Github,
+      Celebrities
     ]
   }));
 
-  it('should log ngOnInit', inject([ Followers ], (followers: Followers) => {
+  it('should log ngOnInit', inject([ Celebrities ], (celebrities: Celebrities) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    followers.ngOnInit();
+    celebrities.ngOnInit();
     expect(console.log).toHaveBeenCalled();
   }));
 

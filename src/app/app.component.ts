@@ -38,15 +38,15 @@ import { AppState } from './app.service';
             [routerLinkActiveOptions]="{exact: true}"
             routerLinkActive="active">
           <a>
-            BY seniors
+            Seniors
           </a>
         </li>
         <li role="presentation"
-            [routerLink]=" ['./followers'] "
+            [routerLink]=" ['./celebrities'] "
             [routerLinkActiveOptions]="{exact: true}"
             routerLinkActive="active">
           <a>
-            BY FOLLOWERS
+            Celebrities
           </a>
         </li>
       </ul>
