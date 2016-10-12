@@ -5,7 +5,7 @@ describe('App', () => {
   });
 
   it('should have a message panel "road to bay area"', () => {
-    let elem = element(by.css('.message'));
+    let elem = element(by.css('.message-celebrities'));
 
     expect(elem.getText()).toEqual('road to bay area');
   });

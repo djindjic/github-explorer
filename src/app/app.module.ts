@@ -16,6 +16,7 @@ import { AppState, InternalStateType } from './app.service';
 import { Rookies } from './rookies';
 import { Celebrities } from './celebrities';
 import { Seniors } from './seniors';
+import { Detail } from './detail';
 import { NoContent } from './no-content';
 import { Github } from './github-api';
 
@@ -41,6 +42,7 @@ type StoreType = {
     Seniors,
     Rookies,
     Celebrities,
+    Detail,
     NoContent
   ],
   imports: [ // import Angular's modules

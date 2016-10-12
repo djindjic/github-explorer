@@ -14,7 +14,7 @@ export class Rookies {
     public appState: AppState,
     public github: Github
   ) {
-      github.getData({
+      github.getUsers({
         location: appState.get('location'),
         sort: 'joined',
         order: 'desc'

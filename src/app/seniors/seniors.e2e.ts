@@ -5,7 +5,7 @@ describe('App', () => {
   });
 
    it('should have a message panel "respect to seniors!"', () => {
-    let elem = element(by.css('.message'));
+    let elem = element(by.css('.message-seniors'));
 
     expect(elem.getText()).toEqual('respect to seniors!');
   });
