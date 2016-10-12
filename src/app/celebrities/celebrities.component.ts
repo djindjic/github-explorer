@@ -23,6 +23,10 @@ export class Celebrities {
       });
   }
 
+  showDetails(login: string) {
+    console.log(login);
+  }
+
   ngOnInit() {
     console.log('hello `celebrities` component');
   }
