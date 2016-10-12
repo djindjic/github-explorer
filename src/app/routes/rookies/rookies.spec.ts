@@ -32,6 +32,7 @@ describe('rookies', () => {
     ]
   }));
 
+  // TODO research MockBackend
   it('should log ngOnInit', inject([ Rookies ], (rookies: Rookies) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();

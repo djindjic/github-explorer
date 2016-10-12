@@ -14,13 +14,21 @@ export class Celebrities {
     public appState: AppState,
     public github: Github
   ) {
-      github.getUsers({
-        location: appState.get('location'),
-        sort: 'followers',
-        order: 'desc'
-      }).subscribe((data) => {
-        this.list = data.items;
-      });
+      this.loadUsers(appState.get('location'));
+      appState.subject
+              .debounceTime(400)
+              .subscribe((location: string) => this.loadUsers(location));
+  }
+
+  loadUsers(location: string) {
+    this.github.getUsers({
+          location: location,
+          sort: 'followers',
+          order: 'desc'
+        })
+        .subscribe((data) => {
+          this.list = data.items;
+        });
   }
 
   ngOnInit() {
