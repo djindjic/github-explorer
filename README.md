@@ -10,3 +10,5 @@ https://github-explorer-32837.firebaseapp.com
 -Unit tests `npm run test`
 
 -Integration tests: `npm run e2e`
+
+-Continuous delivery by committing to the master branch
