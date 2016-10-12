@@ -10,11 +10,11 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-import { AppState } from '../app.service';
-import { Github } from '../github-api';
-import { Rookies } from './rookies.component';
+import { AppState } from '../../app.service';
+import { Github } from '../../github-api';
+import { Celebrities } from './celebrities.component';
 
-describe('rookies', () => {
+describe('celebrities', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
@@ -28,15 +28,15 @@ describe('rookies', () => {
       },
       AppState,
       Github,
-      Rookies
+      Celebrities
     ]
   }));
 
-  it('should log ngOnInit', inject([ Rookies ], (rookies: Rookies) => {
+  it('should log ngOnInit', inject([ Celebrities ], (celebrities: Celebrities) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    rookies.ngOnInit();
+    celebrities.ngOnInit();
     expect(console.log).toHaveBeenCalled();
   }));
 

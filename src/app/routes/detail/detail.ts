@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Github } from '../github-api';
+import { Github } from '../../github-api';
 
 @Component({
   selector: 'detail',

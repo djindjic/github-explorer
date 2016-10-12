@@ -6,9 +6,9 @@ import { Detail } from './detail';
 import { NoContent } from './no-content';
 
 export const ROUTES: Routes = [
-  { path: '',            component: Rookies },
-  { path: 'celebrities', component: Celebrities },
-  { path: 'seniors',     component: Seniors },
-  { path: 'detail/:login',  component: Detail },
-  { path: '**',          component: NoContent },
+  { path: '',              component: Rookies },
+  { path: 'celebrities',   component: Celebrities },
+  { path: 'seniors',       component: Seniors },
+  { path: 'detail/:login', component: Detail },
+  { path: '**',            component: NoContent },
 ];

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
-import { AppState } from '../app.service';
-import { Github } from '../github-api';
+import { AppState } from '../../app.service';
+import { Github } from '../../github-api';
 
 @Component({
-  selector: 'rookies',
-  styleUrls: [ './rookies.component.scss' ],
-  templateUrl: './rookies.component.html'
+  selector: 'celebrities',
+  styleUrls: [ './celebrities.component.scss' ],
+  templateUrl: './celebrities.component.html'
 })
-export class Rookies {
+export class Celebrities {
   list: any[];
   constructor(
     public appState: AppState,
@@ -16,7 +16,7 @@ export class Rookies {
   ) {
       github.getUsers({
         location: appState.get('location'),
-        sort: 'joined',
+        sort: 'followers',
         order: 'desc'
       }).subscribe((data) => {
         this.list = data.items;
@@ -24,6 +24,6 @@ export class Rookies {
   }
 
   ngOnInit() {
-    console.log('hello `rookies` component');
+    console.log('hello `celebrities` component');
   }
 }

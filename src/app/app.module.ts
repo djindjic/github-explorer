@@ -9,16 +9,16 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS } from './environment';
-import { ROUTES } from './app.routes';
+import { ROUTES } from './routes/app.routes';
 // App is our top level component
 import { App } from './app.component';
 import { AppState, InternalStateType } from './app.service';
-import { Rookies } from './rookies';
-import { Celebrities } from './celebrities';
-import { Seniors } from './seniors';
-import { Detail } from './detail';
+import { Rookies } from './routes/rookies';
+import { Celebrities } from './routes/celebrities';
+import { Seniors } from './routes/seniors';
+import { Detail } from './routes/detail';
 import { UsersList } from './users-list';
-import { NoContent } from './no-content';
+import { NoContent } from './routes/no-content';
 import { Github } from './github-api';
 
 // Application wide providers

@@ -10,8 +10,8 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-import { AppState } from '../app.service';
-import { Github } from '../github-api';
+import { AppState } from '../../app.service';
+import { Github } from '../../github-api';
 import { Seniors } from './seniors.component';
 
 describe('seniors', () => {

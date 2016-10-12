@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { AppState } from '../app.service';
-import { Github } from '../github-api';
+import { AppState } from '../../app.service';
+import { Github } from '../../github-api';
 
 @Component({
   selector: 'seniors',
