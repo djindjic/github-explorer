@@ -5,6 +5,8 @@ https://github-explorer-32837.firebaseapp.com
 
 -Start webpack dev server `npm run start:hmr`
 
+-Linting `npm run lint`
+
 -Unit tests `npm run test`
 
 -Integration tests: `npm run e2e`

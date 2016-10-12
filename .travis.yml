@@ -9,6 +9,7 @@ before_install:
   # Updating NPM to relevant version >= 3 on Node.JS LTS
   - npm i -g npm@^3
 script:
+  - npm run lint
   - npm test
   - npm run build:prod
   - ./node_modules/.bin/firebase deploy --token ${FIREBASE_TOKEN}
