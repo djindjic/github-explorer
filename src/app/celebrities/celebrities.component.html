@@ -1,12 +1,5 @@
 <div class="message">
   road to bay area
 </div>
-<table class="users">
-  <body>
-    <tr *ngFor="let item of list"
-        [routerLink]=" ['../detail', item.login] ">
-      <td><img class="avatar" src="{{item.avatar_url}}" /></td>
-      <td>{{item.login}}</td>
-    </tr>
-  </body>
-</table>
+
+<users-list [list]="list">

@@ -17,6 +17,7 @@ import { Rookies } from './rookies';
 import { Celebrities } from './celebrities';
 import { Seniors } from './seniors';
 import { Detail } from './detail';
+import { UsersList } from './users-list';
 import { NoContent } from './no-content';
 import { Github } from './github-api';
 
@@ -43,6 +44,7 @@ type StoreType = {
     Rookies,
     Celebrities,
     Detail,
+    UsersList,
     NoContent
   ],
   imports: [ // import Angular's modules
