@@ -8,8 +8,6 @@ const helpers = require('./helpers');
 /*
  * Webpack Plugins
  */
-// problem with copy-webpack-plugin
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
@@ -237,30 +235,6 @@ module.exports = function(options) {
         /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
         helpers.root('src') // location of your src
       ),
-
-      /*
-       * Plugin: CopyWebpackPlugin
-       * Description: Copy files and directories in webpack.
-       *
-       * Copies project static assets.
-       *
-       * See: https://www.npmjs.com/package/copy-webpack-plugin
-       */
-      new CopyWebpackPlugin([{
-        from: 'src/assets',
-        to: 'assets'
-      }], {
-        ignore: [
-          'humans.txt',
-          'robots.txt'
-        ]
-      }),
-      new CopyWebpackPlugin([{ 
-        from: 'src/assets/robots.txt'
-      }, { 
-        from: 'src/assets/humans.txt' 
-      }]),
-
       /*
        * Plugin: HtmlWebpackPlugin
        * Description: Simplifies creation of HTML files to serve your webpack bundles.
