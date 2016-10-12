@@ -1,10 +1,6 @@
-.message {
-    background-color: black;
-    color: red;
-    border-radius: 45%;
-    width: 350px;
-    height: 79px;
-    font-size: xx-large;
-    padding: 14px;
-    text-align: center;
+@import '../../assets/sass-base/message';
+
+.message-seniors {
+  @extend .message;
+  color: red;
 }
