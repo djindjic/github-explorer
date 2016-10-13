@@ -27,6 +27,8 @@ export class Rookies {
         })
         .subscribe((data) => {
           this.list = data.items;
+        }, (error: any) => {
+          alert(error.json().message);
         });
   }
 

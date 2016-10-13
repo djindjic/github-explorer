@@ -26,6 +26,8 @@ export class Seniors {
           order: 'asc'
         }).subscribe((data) => {
           this.list = data.items;
+        }, (error: any) => {
+          alert(error.json().message);
         });
   }
 
