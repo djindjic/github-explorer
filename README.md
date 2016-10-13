@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/djindjic/github-explorer.svg?branch=master)](https://travis-ci.org/djindjic/github-explorer)
-
+https://twitter.com/traviscistatus
 
 DEMO:
 https://github-explorer-32837.firebaseapp.com

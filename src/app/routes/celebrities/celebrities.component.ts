@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AppState } from '../../app.service';
 import { Github } from '../../github-api';
-import { Subscription } from 'rxjs/subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'celebrities',
