@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-
 import { AppState } from '../../app.service';
 import { Github } from '../../github-api';
+import { Subscription } from 'rxjs/subscription';
 
 @Component({
   selector: 'seniors',
@@ -10,14 +10,13 @@ import { Github } from '../../github-api';
 })
 export class Seniors {
   list: any[];
+  subscription: Subscription;
+
   constructor(
     public appState: AppState,
     public github: Github
   ) {
     this.loadUsers(appState.get('location'));
-    appState.subject
-            .debounceTime(400)
-            .subscribe((location: string) => this.loadUsers(location));
   }
 
   loadUsers(location: string) {
@@ -32,5 +31,12 @@ export class Seniors {
 
   ngOnInit() {
     console.log('hello `seniors` component');
+    this.subscription = this.appState.subject
+                            .debounceTime(400)
+                            .subscribe((location: string) => this.loadUsers(location));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
